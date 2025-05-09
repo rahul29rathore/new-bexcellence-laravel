@@ -1,0 +1,23 @@
+To run this laravel project you have to take some steps 
+
+main step: composer install
+
+step 1: cp .env.example .env
+step 2: 
+(
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_db_name
+DB_USERNAME=your_db_user
+DB_PASSWORD=your_db_password
+)
+step 3: php artisan key:generate
+step 4: php artisan migrate
+step 5: php artisan db:seed

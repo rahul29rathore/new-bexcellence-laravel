@@ -403,7 +403,7 @@
                 </div>
                 <div class="main-footer ht-40">
                     <div class="container-fluid pd-t-0-f ht-100p">
-                        <span>Copyright © {{ date('Y'); }}  <a href="javascript:void0;">BuildMyInfra</a>. All rights reserved. </span>
+                        <span>Copyright © {{ date('Y') }}  <a href="javascript:void0;">BuildMyInfra</a>. All rights reserved. </span>
                     </div>
                 </div>
             </div>
