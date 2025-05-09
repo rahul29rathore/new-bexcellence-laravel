@@ -1,14 +1,14 @@
-@include('layouts.header')
+@include('include.13sqft-header')
 <!-- Main Page -->
 
     <!-- Sidebar -->
-    @include('partials.sidebar')
+    @include('include.13sqft-sidebar')
 
     <!-- Main Content -->
     <div class="main-content">
         @yield('content')
     </div>
-    @extends('layouts.footer')
+    @extends('include.13sqft-footer')
 
 <!-- JS Scripts -->
 <script src="{{ asset('assets/plugins/ionicons/ionicons.js') }}"></script>
