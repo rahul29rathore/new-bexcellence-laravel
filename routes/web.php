@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BewareController;
 use App\Http\Controllers\MdcController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -22,7 +23,8 @@ Route::get('/bmi-dashboard', function () {
 Route::get('/13sqft/13sqft-mdc', [MdcController::class, 'index'])->name('13sqft-mdc');
 
 Route::get('/13sqft/13sqft-mdc-add', function () {
-    return view('13sqft-mdc-add'); });
+    return view('13sqft-mdc-add');
+});
 
 Route::post('13sqft/13sqft-mdc-add-item', [MdcController::class, 'addItems'])->name('13sqft-mdc-add-item');
 
@@ -33,3 +35,8 @@ Route::delete('13sqft/13sqft-mdc-delete/{id}', [MDCController::class, 'delete'])
 Route::delete('/13sqft/13sqft-mdc-item-delete/{id}', [MDCController::class, 'deleteitem'])->name('13sqft-mdc-dashboard');
 
 Route::post('13sqft-mdc-updateitems', [MDCController::class, 'updateItems'])->name('13sqft-mdc-updateitems');
+
+
+//Beware Controller
+
+Route::get('/beware/beware-dashboard', [BewareController::class, 'index']);
