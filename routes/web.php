@@ -18,6 +18,7 @@ Route::get('/bmi-dashboard', function () {
 });
 
 
+Route::get('/beware/beware-dashboard', [BewareController::class, 'index']);
 
 // Route::get('/', function () {
 //     return view('welcome');

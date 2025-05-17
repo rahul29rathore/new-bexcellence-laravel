@@ -68,7 +68,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-layers tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Projects</p>
@@ -85,7 +85,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-dollar-sign tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Project Value</p>
@@ -102,7 +102,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-file-text tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Ongoing Projects</p>
@@ -119,7 +119,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-dollar-sign tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Ongoing Projects Value</p>
@@ -136,7 +136,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-user tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Employees</p>
@@ -153,7 +153,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-users tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Clients</p>
@@ -170,7 +170,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="si si-chart tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Sale Generated</p>
@@ -187,7 +187,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-users tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Vendors</p>
@@ -204,7 +204,7 @@
                         <div class="float-right mt-2">
                             <span class="text-white">
                                 <i class="fe fe-user-check tx-30"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="float-left">
                             <p class="card-text mb-1 text-white">Total Verified Vendors</p>
@@ -225,7 +225,9 @@
                     <div class="d-flex mb-0">
                         <div class="">
                             <h4 class="mb-1 font-weight-bold"><i class="bx bx-rupee"></i>563,275,000</h4>
-                            <p class="mb-2 tx-12 text-muted"><span class="text-danger font-weight-bolder tx-13 ml-2">(-12.45%)</span> Compare from Last month</p>
+                            <p class="mb-2 tx-12 text-muted"><span
+                                    class="text-danger font-weight-bolder tx-13 ml-2">(-12.45%)</span> Compare from
+                                Last month</p>
                         </div>
                         <div class="card-chart bg-pink-transparent brround ml-auto mt-0">
                             <i class="typcn typcn-chart-line-outline text-pink tx-24"></i>
@@ -238,12 +240,15 @@
             <div class="card">
                 <div class="card-body iconfont text-left">
                     <div class="d-flex justify-content-between">
-                        <h4 class="card-title mb-3">Total Offline Sale in <span class="text-danger">January</span></h4>
+                        <h4 class="card-title mb-3">Total Offline Sale in <span class="text-danger">January</span>
+                        </h4>
                     </div>
                     <div class="d-flex mb-0">
                         <div class="">
                             <h4 class="mb-1 font-weight-bold"><i class="bx bx-rupee"></i>563,275,000</h4>
-                            <p class="mb-2 tx-12 text-muted"><span class="text-success font-weight-bolder tx-13 ml-2">(2.45%)</span> Compare from Last month</p>
+                            <p class="mb-2 tx-12 text-muted"><span
+                                    class="text-success font-weight-bolder tx-13 ml-2">(2.45%)</span> Compare from Last
+                                month</p>
                         </div>
                         <div class="card-chart bg-success-transparent brround ml-auto mt-0">
                             <i class="typcn typcn-chart-line-outline text-success tx-24"></i>
@@ -279,21 +284,24 @@
                         <li class="mt-0 d-flex align-items-center justify-content-between">
                             <div>
                                 <i class="ti-files bg-success-gradient text-white product-icon"></i>
-                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span class="text-muted">Mukesh</span></span>
+                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span
+                                        class="text-muted">Mukesh</span></span>
                             </div>
                             <span class="font-weight-semibold tx-14 ml-3">135</span>
                         </li>
                         <li class="mt-0 d-flex align-items-center justify-content-between">
                             <div>
                                 <i class="ti-files bg-warning-gradient text-white product-icon"></i>
-                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span class="text-muted">Ankush</span></span>
+                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span
+                                        class="text-muted">Ankush</span></span>
                             </div>
                             <span class="font-weight-semibold tx-14 ml-3">24</span>
                         </li>
                         <li class="mt-0 d-flex align-items-center justify-content-between">
                             <div>
                                 <i class="ti-files bg-purple-gradient text-white product-icon"></i>
-                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span class="text-muted">Rahul Raj</span></span>
+                                <span class="font-weight-semibold mb-4 tx-14 ml-3">BOQ Submitted By - <span
+                                        class="text-muted">Rahul Raj</span></span>
                             </div>
                             <span class="font-weight-semibold tx-14 ml-3">2</span>
                         </li>
@@ -456,9 +464,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Attendance</h5>
-                    <span> 
-                        <i class="bx bx-user-circle bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-user-circle bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -466,9 +474,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Expenses</h5>
-                    <span> 
-                        <i class="bx bx-dollar-circle bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-dollar-circle bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -476,9 +484,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">BOQ</h5>
-                    <span> 
-                        <i class="bx bx-file bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-file bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -486,9 +494,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">PO</h5>
-                    <span> 
-                        <i class="bx bx-file-blank bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-file-blank bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -496,9 +504,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Invoice</h5>
-                    <span> 
-                        <i class="bx bx-receipt bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-receipt bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -506,9 +514,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Sales</h5>
-                    <span> 
-                        <i class="bx bx-chart bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-chart bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -516,9 +524,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Commercial</h5>
-                    <span> 
-                        <i class="bx bx-building bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-building bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -526,9 +534,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Project Management</h5>
-                    <span> 
-                        <i class="bx bx-chart bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-chart bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -536,9 +544,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Procurement</h5>
-                    <span> 
-                        <i class="bx bx-group bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-group bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -546,9 +554,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Site Engineer</h5>
-                    <span> 
-                        <i class="bx bx-hard-hat bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-hard-hat bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -556,9 +564,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Calculator</h5>
-                    <span> 
-                        <i class="bx bx-calculator bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-calculator bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -566,9 +574,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Documents</h5>
-                    <span> 
-                        <i class="bx bx-folder bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-folder bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -576,9 +584,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Asset Management</h5>
-                    <span> 
-                        <i class="bx bx-box bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-box bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -586,9 +594,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Small Projects</h5>
-                    <span> 
-                        <i class="bx bx-copy-alt bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-copy-alt bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -596,9 +604,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Clients</h5>
-                    <span> 
-                        <i class="bx bx-user-check bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-user-check bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -606,9 +614,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Users</h5>
-                    <span> 
-                        <i class="bx bx-user-voice bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-user-voice bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -616,9 +624,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">BOQs for Support</h5>
-                    <span> 
-                        <i class="bx bx-copy-alt bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-copy-alt bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -626,9 +634,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Engg. Daily Update</h5>
-                    <span> 
-                        <i class="bx bx-bar-chart bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-bar-chart bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -636,9 +644,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">HRMS</h5>
-                    <span> 
-                        <i class="bx bx-chart bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-chart bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -646,9 +654,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Material Replacement</h5>
-                    <span> 
-                        <i class="bx bx-sync bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-sync bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -656,9 +664,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Forms</h5>
-                    <span> 
-                        <i class="bx bx-file bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-file bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -666,9 +674,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">CCTV Calculator</h5>
-                    <span> 
-                        <i class="bx bx-cctv bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-cctv bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -676,9 +684,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">P&L Projects</h5>
-                    <span> 
-                        <i class="bx bx-copy-alt bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-copy-alt bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -686,9 +694,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Tools</h5>
-                    <span> 
-                        <i class="bx bx-wrench bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-wrench bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -696,9 +704,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Payment Update</h5>
-                    <span> 
-                        <i class="bx bx-credit-card bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-credit-card bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -706,9 +714,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Petty Cash</h5>
-                    <span> 
-                        <i class="bx bx-money bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-money bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -716,9 +724,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Site Audit</h5>
-                    <span> 
-                        <i class="bx bx-map bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-map bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -726,9 +734,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Cheque Payment Dashboard</h5>
-                    <span> 
-                        <i class="bx bx-desktop bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-desktop bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -736,9 +744,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Material Delivery Challan</h5>
-                    <span> 
-                        <i class="bx bx-credit-card-front bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-credit-card-front bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -746,9 +754,9 @@
             <div class="card card-img-holder">
                 <div class="card-body list-icons option-item">
                     <h5 class="m-0">Work Completion Certificate</h5>
-                    <span> 
-                        <i class="bx bx-certification bx-sm"></i> 
-                    </span> 
+                    <span>
+                        <i class="bx bx-certification bx-sm"></i>
+                    </span>
                 </div>
             </div>
         </div>

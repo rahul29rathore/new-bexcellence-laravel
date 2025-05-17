@@ -41,8 +41,8 @@
         <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
         <aside class="app-sidebar sidebar-scroll ps ps--active-y">
             <div class="main-sidebar-header active">
-                <a class="desktop-logo logo-light active" href="index.php"><img src="assets/img/brand/logo.png"
-                        class="main-logo" alt="logo"></a>
+                <a class="desktop-logo logo-light active" href="{{ url('/dashboard') }}"><img
+                        src="assets/img/brand/logo.png" class="main-logo" alt="logo"></a>
                 <a class="logo-icon mobile-logo icon-light active" href="index.php"><img
                         src="assets/img/brand/favicon.png" class="logo-icon" alt="logo"></a>
             </div>
