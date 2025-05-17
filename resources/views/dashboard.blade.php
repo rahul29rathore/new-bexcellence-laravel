@@ -47,8 +47,7 @@
                         <div class="card-body px-0">
                             <div class="row">
                                 <a href="{{ url('bmi-dashboard') }}" class="col text-center panel-card text-dark">
-                                    <img src="assets/img/brand/bmi-logo.png" alt="logo" width="80"
-                                        class="mb-4">
+                                    <img src="assets/img/brand/bmi-logo.png" alt="logo" width="80" class="mb-4">
                                     <h4>LOGIN TO <span class="text-danger">BUILDMYINFRA</span></h4>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <span class="btn btn-link text-danger">Redirect to Panel <i

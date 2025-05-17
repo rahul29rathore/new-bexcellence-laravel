@@ -304,9 +304,9 @@
                     </div>
                     <div class="main-header-right">
                         <div class="panel-switcher">
-                            <a href="dashboard.php" class="active">B-EXCELLENCE</a>
-                            <a href="13sqft/13sqft-dashboard.php">13SQFT</a>
-                            <a href="beware/beware-dashboard.php">BEWARE</a>
+                             <a href="{{ url('/bmi-dashboard') }}" class="active">B-EXCELLENCE</a>
+                        <a href="{{ url('/13sqft/13sqft-dashboard') }}" >13SQFT</a>
+                        <a href="{{ url('/beware/beware-dashboard') }}">BEWARE</a>
                         </div>
                         <div class="nav nav-item  navbar-nav-right ml-auto">
                             <div class="dropdown main-profile-menu nav nav-item nav-link">
