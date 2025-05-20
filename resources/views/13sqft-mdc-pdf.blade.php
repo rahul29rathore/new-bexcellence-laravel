@@ -90,24 +90,20 @@
                                     <th>PO No.</th>
                                     <th>Description of Goods</th>
                                     <th>Quantity</th>
-                                    <th>Yes/No</th>
+                                    <th>Date & Time</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>SRC1/OPX/23-24/00007</td>
-                                    <td>SITC of 24 port PoE Switch</td>
-                                    <td>1</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>SRC1/OPX/23-24/00007</td>
-                                    <td>Engineer Visit Charge</td>
-                                    <td>1</td>
-                                    <td>No</td>
-                                </tr>
+                                @foreach ($mdc_items as $index => $item)
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $item->project_id }}</td>
+                                        <td>{{ $item->item }}</td>
+                                        <td>{{ $item->qty }}</td>
+                                        <td>{{ $item->date }} {{ $item->time }}</td>
+                                    </tr>
+                                @endforeach
+
                                 <tr>
                                     <th colspan="2">Terms & Conditions</th>
                                     <td colspan="3" height="100px"></td>
@@ -139,6 +135,7 @@
                                 <td colspan="4" height="100px"></td>
                             </tr>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -155,24 +152,24 @@
                 const originalContent = $('body').html();
 
                 const printHtml = `
-                                        <html>
-                                            <head>
-                                                <title>Print MDC</title>
-                                                <style>
-                                                    body { font-family: Arial, sans-serif; margin: 40px; }
-                                                    table { width: 100%; border-collapse: collapse; }
-                                                    th, td { border: 1px solid #ccc; padding: 10px; }
-                                                    .text-center { text-align: center; }
-                                                    .text-right { text-align: right; }
-                                                    .bg-light { background-color: #ecf0fa; }
-                                                    input.form-control { border: none; width: 100%; }
-                                                </style>
-                                            </head>
-                                            <body>
-                                                ${content}
-                                            </body>
-                                        </html>
-                                    `;
+                                            <html>
+                                                <head>
+                                                    <title>Print MDC</title>
+                                                    <style>
+                                                        body { font-family: Arial, sans-serif; margin: 40px; }
+                                                        table { width: 100%; border-collapse: collapse; }
+                                                        th, td { border: 1px solid #ccc; padding: 10px; }
+                                                        .text-center { text-align: center; }
+                                                        .text-right { text-align: right; }
+                                                        .bg-light { background-color: #ecf0fa; }
+                                                        input.form-control { border: none; width: 100%; }
+                                                    </style>
+                                                </head>
+                                                <body>
+                                                    ${content}
+                                                </body>
+                                            </html>
+                                        `;
 
                 $('body').html(printHtml);
                 window.print();
@@ -189,20 +186,20 @@
 
         function insertRow(e) {
             var row = `
-                                            <tr>
-                                                <td align="center" scope="row">1.</td>
-                                                <td align="center"><input type="text" class="form-control"></td>
-                                                <td align="center"><input type="text" class="form-control"></td>
-                                                <td align="center"><input type="text" class="form-control"></td>
-                                                <td align="center">
-                                                    <div class="d-flex">
-                                                        <span class="mx-2 c-pointer" onclick="deleteRow(this)">
-                                                            <i class="bx bx-minus tx-22 btn-danger-gradient p-1 badge-pill"></i>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        `;
+                                                <tr>
+                                                    <td align="center" scope="row">1.</td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center">
+                                                        <div class="d-flex">
+                                                            <span class="mx-2 c-pointer" onclick="deleteRow(this)">
+                                                                <i class="bx bx-minus tx-22 btn-danger-gradient p-1 badge-pill"></i>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            `;
             $('#tbl-body').prepend(row);
             updateSerialNumbers();
         }
