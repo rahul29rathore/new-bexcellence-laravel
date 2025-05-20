@@ -36,6 +36,7 @@ Route::delete('/13sqft/13sqft-mdc-item-delete/{id}', [MDCController::class, 'del
 
 Route::post('13sqft-mdc-updateitems', [MDCController::class, 'updateItems'])->name('13sqft-mdc-updateitems');
 
+Route::get('/13sqft/13sqft-mdc-pdf/{id}', [MDCController::class, 'mdcPdfView'])->name('13sqft-mdc-pdf');
 
 //Beware Controller
 
