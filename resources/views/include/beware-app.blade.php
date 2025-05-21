@@ -4,7 +4,6 @@
     <!-- Sidebar -->
     @include('include.beware-sidebar')
 
-    <!-- Main Content -->
     <div class="main-content">
         @yield('content')
     </div>

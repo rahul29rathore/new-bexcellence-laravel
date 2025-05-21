@@ -86,11 +86,10 @@
                                                                 data-url="{{ url('13sqft/13sqft-mdc-item-delete/' . $item->mdc_items_id) }}">
                                                                 <i class="fa fa-trash"></i>
                                                             </a>
-                                                            <h2>|</h2>
-                                                            <a class="dropdown-item swal-parameter" href="#"
-                                                                data-url="{{ url('13sqft/13sqft-mdc-item-update/' . $item->mdc_items_id) }}">
+                                                            <!-- <h2>|</h2>
+                                                            <a class="dropdown-item" href="{{ url('13sqft/13sqft-mdc-item-update/' . $item->mdc_items_id) }}">
                                                                 <i class="fa fa-edit"></i>
-                                                            </a>
+                                                            </a> -->
                                                         </div>
                                                     </td>
                                                 </tr>

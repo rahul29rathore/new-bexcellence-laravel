@@ -8,9 +8,9 @@
                 <h2 class="main-content-title tx-24 mb-2">MDC Details</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mg-b-0">
-                        <li class="breadcrumb-item"><a href="{{ url('dashboard') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="{{ url('13sqft-mdc') }}">MDC</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">MDC Details</li>
+                        <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-mdc') }}">MDC</a></li>
+                        <li class="breadcrumb-item active">Edit New MDC</li>
                     </ol>
                 </nav>
             </div>
@@ -40,25 +40,25 @@
                                 <th>COMPANY</th>
                                 <td>MAKEMYINFRA PRIVATE LIMITED</td>
                                 <th>CLIENT</th>
-                                <td>Coldman Logistics</td>
+                                <td>{{ $fetch->client_name }}</td>
                             </tr>
                             <tr>
                                 <th>GSTIN</th>
                                 <td>07AALCM2173N1Z0</td>
                                 <th>Date</th>
-                                <td>2023-05-26</td>
+                                <td>{{ $fetch->client_date }}</td>
                             </tr>
                             <tr>
                                 <th>PAN NO</th>
                                 <td>AALCM2173N</td>
                                 <th>Serial No.</th>
-                                <td>NA</td>
+                                <td>{{ $fetch->serial_no }}</td>
                             </tr>
                             <tr>
                                 <th>Project ID</th>
-                                <td>NA</td>
+                                <td>{{$fetch->project_id}}</td>
                                 <th>Client PO NO.</th>
-                                <td>SRC1/OPX/23-24/00007</td>
+                                <td>{{$fetch->client_po_no}}</td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="text-center">537, Adarsh Apartment, Pocket 16, Sector-3, Dwarka,
@@ -66,18 +66,17 @@
                             </tr>
                             <tr>
                                 <th>LC & NAME</th>
-                                <td colspan="3">Varadaiahpalem Varadaiahpalem</td>
+                                <td colspan="3">{{ $fetch->location_name }}</td>
                             </tr>
                             <tr>
                                 <th>Site Address</th>
-                                <td colspan="3">SY No. 201, 1305, Italia Lane, Mopurupalli Village, Varadaiahpalem Mandal,
-                                    Chittoor, AP-517541</td>
+                                <td colspan="3">{{ $fetch->address }}</td>
                             </tr>
                             <tr>
                                 <th>Contact Person</th>
-                                <td>Mr. Kartikey</td>
+                                <td>{{ $fetch->contact_name }}</td>
                                 <th>Contact No.</th>
-                                <td>+91 76520 23189</td>
+                                <td>{{ $fetch->contact_no }}</td>
                             </tr>
                         </table>
 
@@ -91,24 +90,20 @@
                                     <th>PO No.</th>
                                     <th>Description of Goods</th>
                                     <th>Quantity</th>
-                                    <th>Yes/No</th>
+                                    <th>Date & Time</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>SRC1/OPX/23-24/00007</td>
-                                    <td>SITC of 24 port PoE Switch</td>
-                                    <td>1</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>SRC1/OPX/23-24/00007</td>
-                                    <td>Engineer Visit Charge</td>
-                                    <td>1</td>
-                                    <td>No</td>
-                                </tr>
+                                @foreach ($mdc_items as $index => $item)
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $item->project_id }}</td>
+                                        <td>{{ $item->item }}</td>
+                                        <td>{{ $item->qty }}</td>
+                                        <td>{{ $item->date }} {{ $item->time }}</td>
+                                    </tr>
+                                @endforeach
+
                                 <tr>
                                     <th colspan="2">Terms & Conditions</th>
                                     <td colspan="3" height="100px"></td>
@@ -140,6 +135,7 @@
                                 <td colspan="4" height="100px"></td>
                             </tr>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -156,24 +152,24 @@
                 const originalContent = $('body').html();
 
                 const printHtml = `
-                        <html>
-                            <head>
-                                <title>Print MDC</title>
-                                <style>
-                                    body { font-family: Arial, sans-serif; margin: 40px; }
-                                    table { width: 100%; border-collapse: collapse; }
-                                    th, td { border: 1px solid #ccc; padding: 10px; }
-                                    .text-center { text-align: center; }
-                                    .text-right { text-align: right; }
-                                    .bg-light { background-color: #ecf0fa; }
-                                    input.form-control { border: none; width: 100%; }
-                                </style>
-                            </head>
-                            <body>
-                                ${content}
-                            </body>
-                        </html>
-                    `;
+                                            <html>
+                                                <head>
+                                                    <title>Print MDC</title>
+                                                    <style>
+                                                        body { font-family: Arial, sans-serif; margin: 40px; }
+                                                        table { width: 100%; border-collapse: collapse; }
+                                                        th, td { border: 1px solid #ccc; padding: 10px; }
+                                                        .text-center { text-align: center; }
+                                                        .text-right { text-align: right; }
+                                                        .bg-light { background-color: #ecf0fa; }
+                                                        input.form-control { border: none; width: 100%; }
+                                                    </style>
+                                                </head>
+                                                <body>
+                                                    ${content}
+                                                </body>
+                                            </html>
+                                        `;
 
                 $('body').html(printHtml);
                 window.print();
@@ -190,20 +186,20 @@
 
         function insertRow(e) {
             var row = `
-                            <tr>
-                                <td align="center" scope="row">1.</td>
-                                <td align="center"><input type="text" class="form-control"></td>
-                                <td align="center"><input type="text" class="form-control"></td>
-                                <td align="center"><input type="text" class="form-control"></td>
-                                <td align="center">
-                                    <div class="d-flex">
-                                        <span class="mx-2 c-pointer" onclick="deleteRow(this)">
-                                            <i class="bx bx-minus tx-22 btn-danger-gradient p-1 badge-pill"></i>
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
-                        `;
+                                                <tr>
+                                                    <td align="center" scope="row">1.</td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center"><input type="text" class="form-control"></td>
+                                                    <td align="center">
+                                                        <div class="d-flex">
+                                                            <span class="mx-2 c-pointer" onclick="deleteRow(this)">
+                                                                <i class="bx bx-minus tx-22 btn-danger-gradient p-1 badge-pill"></i>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            `;
             $('#tbl-body').prepend(row);
             updateSerialNumbers();
         }

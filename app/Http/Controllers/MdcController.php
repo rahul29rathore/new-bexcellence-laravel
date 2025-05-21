@@ -199,5 +199,18 @@ class MdcController extends Controller
         return redirect()->route('13sqft-mdc-edit', ['id' => $mdc_id])->with('success', 'MDC and items updated successfully!');
     }
 
+    public function mdcPdfView($id)
+    {
+        DB::beginTransaction();
+
+        $fetch = DB::table('mdcsqft')->where('mdc_id', $id)->first();
+
+        $mdc_u_id = $fetch->mdc_u_id;
+
+        $mdc_items = DB::table('mdcsqft_items')->where('mdc_u_id', $mdc_u_id)->get();
+
+
+        return view('13sqft-mdc-pdf', compact('fetch', 'mdc_items'));
+    }
 
 }
