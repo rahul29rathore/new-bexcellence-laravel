@@ -35,13 +35,9 @@ Route::delete('13sqft/13sqft-mdc-delete/{id}', [MDCController::class, 'delete'])
 Route::delete('/13sqft/13sqft-mdc-item-delete/{id}', [MDCController::class, 'deleteitem'])->name('13sqft-mdc-dashboard');
 
 Route::post('13sqft-mdc-updateitems', [MDCController::class, 'updateItems'])->name('13sqft-mdc-updateitems');
-
-<<<<<<< HEAD
-Route::get('/beware/beware-dashboard', [BewareController::class, 'index']);
-=======
 Route::get('/13sqft/13sqft-mdc-pdf/{id}', [MDCController::class, 'mdcPdfView'])->name('13sqft-mdc-pdf');
->>>>>>> 47e1de08745f55d11be2ec5d190d2df4fc9e7cfc
+
+
 
 //Beware Controller
-
 Route::get('/beware/beware-dashboard', [BewareController::class, 'index']);
