@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BewareController;
 use App\Http\Controllers\MdcController;
+use App\Http\Controllers\WCCController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
@@ -37,6 +38,24 @@ Route::delete('/13sqft/13sqft-mdc-item-delete/{id}', [MDCController::class, 'del
 Route::post('13sqft-mdc-updateitems', [MDCController::class, 'updateItems'])->name('13sqft-mdc-updateitems');
 Route::get('/13sqft/13sqft-mdc-pdf/{id}', [MDCController::class, 'mdcPdfView'])->name('13sqft-mdc-pdf');
 
+
+//WCC Controller
+Route::get('/13sqft/13sqft-wcc', [WCCController::class, 'index'])->name('13sqft-wcc');
+
+Route::get('/13sqft/13sqft-wcc-add', function () {
+    return view('13sqft-wcc-add');
+});
+
+Route::post('13sqft/13sqft-wcc-add-item', [WCCController::class, 'addItems'])->name('13sqft-wcc-add-item');
+
+Route::get('/13sqft/13sqft-wcc-edit/{id}', [WCCController::class, 'edit'])->name('13sqft-wcc-edit');
+
+Route::delete('13sqft/13sqft-wcc-delete/{id}', [WCCController::class, 'delete'])->name('13sqft-wcc-dashboard');
+
+Route::delete('/13sqft/13sqft-wcc-item-delete/{id}', [WCCController::class, 'deleteitem'])->name('13sqft-wcc-dashboard');
+
+Route::post('13sqft-wcc-updateitems', [WCCController::class, 'updateItems'])->name('13sqft-wcc-updateitems');
+Route::get('/13sqft/13sqft-wcc-pdf/{id}', [WCCController::class, 'wccPdfView'])->name('13sqft-wcc-pdf');
 
 
 //Beware Controller
