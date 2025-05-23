@@ -34,8 +34,6 @@ class WCCController extends Controller
 
         return view('13sqft-wcc', compact('totalWCC'));
     }
-
-
     // ADD ITEMS
     public function addItems(Request $request)
     {
@@ -101,22 +99,22 @@ class WCCController extends Controller
 
     public function edit($id)
     {
-        $fetch = DB::table('mdcsqft')->where('mdc_id', $id)->first();
+        $fetch = DB::table('wccsqft')->where('wcc_id', $id)->first();
 
-        $mdc_u_id = $fetch->mdc_u_id;
+        $wcc_u_id = $fetch->wcc_u_id;
 
-        $mdc_items = DB::table('mdcsqft_items')->where('mdc_u_id', $mdc_u_id)->get();
+        $wcc_items = DB::table('wccsqft_items')->where('wcc_u_id', $wcc_u_id)->get();
 
 
-        return view('13sqft-mdc-edit', compact('fetch', 'mdc_items'));
+        return view('13sqft-wcc-edit', compact('fetch', 'wcc_items'));
     }
     public function deleteitem($id)
     {
         DB::beginTransaction();
         try {
-            $mdc_items_id = $id;
+            $wcc_items_id = $id;
 
-            DB::table('mdcsqft_items')->where('mdc_items_id', $mdc_items_id)->delete();
+            DB::table('wccsqft_items')->where('wcc_items_id', $wcc_items_id)->delete();
             DB::commit();
 
             return response()->json(['success' => true], 200);
@@ -131,16 +129,16 @@ class WCCController extends Controller
         DB::beginTransaction();
 
         try {
-            $fetch = DB::table('mdcsqft')->where('mdc_id', $id)->first();
+            $fetch = DB::table('wccsqft')->where('wcc_id', $id)->first();
 
             if (!$fetch) {
-                return response()->json(['error' => 'MDC not found.'], 404);
+                return response()->json(['error' => 'WCC not found.'], 404);
             }
 
-            $mdc_u_id = $fetch->mdc_u_id;
+            $wcc_u_id = $fetch->wcc_u_id;
 
-            DB::table('mdcsqft_items')->where('mdc_u_id', $mdc_u_id)->delete();
-            DB::table('mdcsqft')->where('mdc_id', $id)->delete();
+            DB::table('wccsqft_items')->where('wcc_u_id', $wcc_u_id)->delete();
+            DB::table('wccsqft')->where('wcc_id', $id)->delete();
 
             DB::commit();
 
@@ -154,10 +152,10 @@ class WCCController extends Controller
 
     public function updateItems(Request $request)
     {
-        $mdc_id = $request->mdc_id;
+        $wcc_id = $request->wcc_id;
         $project_id = $request->project_id;
         $serial_no = $request->serial_no;
-        $mdc_u_id = $request->mdc_u_id;
+        $wcc_u_id = $request->wcc_u_id;
         $client_po_no = $request->client_po_no;
 
         $client_name = addslashes($request->client_name);
@@ -167,8 +165,8 @@ class WCCController extends Controller
         $contact_name = addslashes($request->contact_name);
         $contact_no = addslashes($request->contact_no);
         $address = addslashes($request->address);
-        DB::table('mdcsqft')
-            ->where('mdc_id', $mdc_id)
+        DB::table('wccsqft')
+            ->where('wcc_id', $wcc_id)
             ->update([
                 'client_name' => $client_name,
                 'client_date' => $client_date,
@@ -185,31 +183,33 @@ class WCCController extends Controller
             $item = addslashes($request->item[$index]);
             $qty = addslashes($request->qty[$index]);
             $unit = addslashes($request->unit[$index]);
-            $mdc_items_id = $request->mdc_items_id[$index];
-            DB::table('mdcsqft_items')
-                ->where('mdc_items_id', $mdc_items_id)
+            $si = addslashes($request->si[$index]);
+            $wcc_items_id = $request->wcc_items_id[$index];
+            DB::table('wccsqft_items')
+                ->where('wcc_items_id', $wcc_items_id)
                 ->update([
                     'item' => $item,
                     'qty' => $qty,
+                    'si' => $si,
                     'unit' => $unit,
                 ]);
         }
 
-        return redirect()->route('13sqft-mdc-edit', ['id' => $mdc_id])->with('success', 'MDC and items updated successfully!');
+        return redirect()->route('13sqft-wcc-edit', ['id' => $wcc_id])->with('success', 'wcc and items updated successfully!');
     }
 
-    public function mdcPdfView($id)
+    public function wccPdfView($id)
     {
         DB::beginTransaction();
 
-        $fetch = DB::table('mdcsqft')->where('mdc_id', $id)->first();
+        $fetch = DB::table('wccsqft')->where('wcc_id', $id)->first();
 
-        $mdc_u_id = $fetch->mdc_u_id;
+        $wcc_u_id = $fetch->wcc_u_id;
 
-        $mdc_items = DB::table('mdcsqft_items')->where('mdc_u_id', $mdc_u_id)->get();
+        $wcc_items = DB::table('wccsqft_items')->where('wcc_u_id', $wcc_u_id)->get();
 
 
-        return view('13sqft-mdc-pdf', compact('fetch', 'mdc_items'));
+        return view('13sqft-wcc-pdf', compact('fetch', 'wcc_items'));
     }
 
 }

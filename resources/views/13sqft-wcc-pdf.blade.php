@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="breadcrumb-header">
             <div class="left-content">
-                <h2 class="main-content-title tx-24 mb-2">MDC Details</h2>
+                <h2 class="main-content-title tx-24 mb-2">Wcc Details</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mg-b-0">
                         <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-dashboard') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-mdc') }}">MDC</a></li>
-                        <li class="breadcrumb-item active">Edit New MDC</li>
+                        <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-wcc') }}">Wcc</a></li>
+                        <li class="breadcrumb-item active">Edit New Wcc</li>
                     </ol>
                 </nav>
             </div>
@@ -90,16 +90,18 @@
                                     <th>PO No.</th>
                                     <th>Description of Goods</th>
                                     <th>Quantity</th>
+                                    <th>S/I</th>
                                     <th>Yes/No</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($mdc_items as $index => $item)
+                                @foreach ($wcc_items as $index => $item)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
                                         <td>{{ $item->project_id }}</td>
                                         <td>{{ $item->item }}</td>
                                         <td>{{ $item->qty }}</td>
+                                        <td>{{ $item->si }}</td>
                                         <td>{{ $item->unit }}</tr>
                                     </tr>
                                 @endforeach
@@ -154,7 +156,7 @@
                 const printHtml = `
                                             <html>
                                                 <head>
-                                                    <title>Print MDC</title>
+                                                    <title>Print WCC</title>
                                                     <style>
                                                         body { font-family: Arial, sans-serif; margin: 40px; }
                                                         table { width: 100%; border-collapse: collapse; }

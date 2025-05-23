@@ -6,12 +6,12 @@
         <div class="breadcrumb-header">
             <div class="left-content">
                 <div>
-                    <h2 class="main-content-title tx-24 mb-2">Edit MDC</h2>
+                    <h2 class="main-content-title tx-24 mb-2">Edit WCC</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mg-b-0">
                             <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-mdc') }}">MDC</a></li>
-                            <li class="breadcrumb-item active">Edit New MDC</li>
+                            <li class="breadcrumb-item"><a href="{{ url('13sqft/13sqft-wcc') }}">WCC</a></li>
+                            <li class="breadcrumb-item active">Edit New WCC</li>
                         </ol>
                     </nav>
                 </div>
@@ -20,7 +20,7 @@
 
         <div class="row row-sm">
             <div class="col-xl-12">
-                <form action="{{ route('13sqft-mdc-updateitems') }}" method="POST">
+                <form action="{{ route('13sqft-wcc-updateitems') }}" method="POST">
                     @csrf
                     <div class="card">
                         <div class="card-header">
@@ -35,7 +35,7 @@
 
                         <div class="card-body">
                             <div class="row">
-                                <input type="hidden" name="mdc_id" id="mdc_id" value="{{ $fetch->mdc_id }}">
+                                <input type="hidden" name="wcc_id" id="wcc_id" value="{{ $fetch->wcc_id }}">
                                 @foreach (['Client Name' => 'client_name', 'Date' => 'client_date', 'Project ID' => 'project_id', 'Serial No.' => 'serial_no', 'Client PO No.' => 'client_po_no', 'Location Code' => 'location_code', 'Location Name' => 'location_name', 'Contact Person' => 'contact_name', 'Contact No.' => 'contact_no', 'Site Address' => 'address',] as $label => $name)
                                     <div
                                         class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mt-3 {{ $name == 'site_address' ? 'col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12' : '' }}">
@@ -55,18 +55,19 @@
                                                 <th class="text-center" width="45">S.No.</th>
                                                 <th class="text-center">Item</th>
                                                 <th class="text-center">Qty.</th>
+                                                <th class="text-center">S/I</th>
                                                 <th class="text-center">Unit</th>
                                                 <th class="text-center" width="90">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tbl-body">
 
-                                            @foreach($mdc_items as $index => $item)
+                                            @foreach($wcc_items as $index => $item)
                                                 <tr>
-                                                    <input type="hidden" name="mdc_items_id[]" id="mdc_items_id"
-                                                        value="{{ $item->mdc_items_id }}">
-                                                    <input type="hidden" name="mdc_u_id[]" id="mdc_u_id"
-                                                        value="{{ $item->mdc_u_id }}">
+                                                    <input type="hidden" name="wcc_items_id[]" id="wcc_items_id"
+                                                        value="{{ $item->wcc_items_id }}">
+                                                    <input type="hidden" name="wcc_u_id[]" id="wcc_u_id"
+                                                        value="{{ $item->wcc_u_id }}">
                                                     <td align="center">{{ $item->sno }}.</td>
                                                     <td align="center">
                                                         <input type="text" class="form-control" name="item[]"
@@ -77,17 +78,21 @@
                                                             value="{{ $item->qty }}" required>
                                                     </td>
                                                     <td align="center">
+                                                        <input type="text" class="form-control" name="si[]"
+                                                            value="{{ $item->si }}" required>
+                                                    </td>
+                                                    <td align="center">
                                                         <input type="text" class="form-control" name="unit[]"
                                                             value="{{ $item->unit }}" required>
                                                     </td>
                                                     <td align="center">
                                                         <div class="d-flex justify-content-around">
                                                             <a class="dropdown-item swal-parameter" href="#"
-                                                                data-url="{{ url('13sqft/13sqft-mdc-item-delete/' . $item->mdc_items_id) }}">
+                                                                data-url="{{ url('13sqft/13sqft-wcc-item-delete/' . $item->wcc_items_id) }}">
                                                                 <i class="fa fa-trash"></i>
                                                             </a>
                                                             <!-- <h2>|</h2>
-                                                            <a class="dropdown-item" href="{{ url('13sqft/13sqft-mdc-item-update/' . $item->mdc_items_id) }}">
+                                                            <a class="dropdown-item" href="{{ url('13sqft/13sqft-wcc-item-update/' . $item->wcc_items_id) }}">
                                                                 <i class="fa fa-edit"></i>
                                                             </a> -->
                                                         </div>
