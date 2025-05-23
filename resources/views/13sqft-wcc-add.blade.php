@@ -19,7 +19,7 @@
 
     <div class="row row-sm">
         <div class="col-xl-12">
-            <form action="{{ route('13sqft-mdc-add-item') }}" method="POST">
+            <form action="{{ route('13sqft-wcc-add-item') }}" method="POST">
                 @csrf
                 <div class="card">
                     <div class="card-header">
@@ -62,6 +62,7 @@
                                                 <th class="text-center" width="45">S.No.</th>
                                                 <th class="text-center">Item</th>
                                                 <th class="text-center">Qty.</th>
+                                                <th class="text-center">S/I</th>
                                                 <th class="text-center">Unit</th>
                                                 <th class="text-center" width="90">Action</th>
                                             </tr>
@@ -71,6 +72,7 @@
                                                 <td align="center" scope="row">1.</td>
                                                 <td align="center"><input type="text" class="form-control" name="item[]" required></td>
                                                 <td align="center"><input type="text" class="form-control" name="qty[]" required></td>
+                                                <td align="center"><input type="text" class="form-control" name="si[]" required></td>
                                                 <td align="center"><input type="text" class="form-control" name="unit[]" required></td>
                                                 <td align="center">
                                                     <div class="d-flex justify-content-center">
@@ -108,6 +110,7 @@
                     <td align="center">1.</td>
                     <td align="center"><input type="text" class="form-control" name="item[]" required></td>
                     <td align="center"><input type="text" class="form-control" name="qty[]" required></td>
+                    <td align="center"><input type="text" class="form-control" name="si[]" required></td>
                     <td align="center"><input type="text" class="form-control" name="unit[]" required></td>
                     <td align="center">
                         <div class="d-flex justify-content-center">

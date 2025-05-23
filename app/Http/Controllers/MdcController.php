@@ -41,7 +41,6 @@ class MdcController extends Controller
     // ADD ITEMS
     public function addItems(Request $request)
     {
-
         DB::beginTransaction();
 
         try {

@@ -46,7 +46,7 @@
                                 <th>GSTIN</th>
                                 <td>07AALCM2173N1Z0</td>
                                 <th>Date</th>
-                                <td>{{ $fetch->client_date }}</td>
+                                <td>{{ \Carbon\Carbon::parse($fetch->client_date)->format('d-m-Y') }}</td>
                             </tr>
                             <tr>
                                 <th>PAN NO</th>

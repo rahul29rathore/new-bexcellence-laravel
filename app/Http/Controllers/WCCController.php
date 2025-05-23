@@ -13,21 +13,21 @@ class WCCController extends Controller
         $search = $request->input('search');
         $limit = $request->input('limit', 10);
         $limit = ($limit === 'All') ? 100000 : $limit;
-        
+
         $query = DB::table('wccsqft')->orderBy('wcc_id', 'desc');
         if (!empty($search)) {
             $query->where(function ($q) use ($search) {
                 $q->where('client_name', 'like', "%{$search}%")
-                ->orWhere('client_po_no', 'like', "%{$search}%")
-                ->orWhere('project_id', 'like', "%{$search}%");
+                    ->orWhere('client_po_no', 'like', "%{$search}%")
+                    ->orWhere('project_id', 'like', "%{$search}%");
             });
         }
-        
+
         $totalWCC = $query->paginate($limit)->appends([
             'search' => $search,
             'limit' => $limit,
         ]);
-        
+
         if ($request->ajax()) {
             return view('include.13sqft-wcc-table', compact('totalWCC'))->render();
         }
@@ -43,12 +43,11 @@ class WCCController extends Controller
         DB::beginTransaction();
 
         try {
-            $mdc_u_id = uniqid();
-            $mdc_status = 1;
-            $mdc_date = date("Y-m-d");
+            $wcc_u_id = uniqid();
+            $wcc_status = 1;
+            $wcc_date = date("Y-m-d");
             $time = date("h:i:sa");
-
-            DB::table('mdcsqft')->insert([
+            DB::table('wccsqft')->insert([
                 'client_name' => $request->client_name,
                 'client_date' => $request->client_date,
                 'project_id' => $request->project_id,
@@ -59,9 +58,9 @@ class WCCController extends Controller
                 'address' => $request->address,
                 'contact_name' => $request->contact_name,
                 'contact_no' => $request->contact_no,
-                'mdc_status' => $mdc_status,
-                'mdc_u_id' => $mdc_u_id,
-                'mdc_date' => $mdc_date,
+                'wcc_status' => $wcc_status,
+                'wcc_u_id' => $wcc_u_id,
+                'wcc_date' => $wcc_date,
                 'terms_and_condition' => '',
                 'requiredvaluablefeedback' => '',
                 'feedback' => '',
@@ -73,22 +72,24 @@ class WCCController extends Controller
             $count = count($request->item);
 
             for ($i = 0; $i < $count; $i++) {
-                DB::table('mdcsqft_items')->insert([
+                DB::table('wccsqft_items')->insert([
                     'project_id' => $request->project_id,
                     'serial_no' => $request->serial_no,
-                    'mdc_u_id' => $mdc_u_id,
+                    'wcc_u_id' => $wcc_u_id,
                     'sno' => $i + 1,
                     'client_po_no' => $request->client_po_no,
                     'item' => addslashes($request->item[$i]),
                     'qty' => addslashes($request->qty[$i]),
+                    'si' => addslashes($request->si[$i]),
                     'unit' => addslashes($request->unit[$i]),
-                    'date' => $mdc_date,
+                    'date' => $wcc_date,
                     'time' => $time,
+                    'login_name' => 'Rudraa',
                 ]);
             }
 
             DB::commit();
-            return redirect()->back()->with('success', 'MDC data saved successfully.');
+            return redirect()->back()->with('success', 'WCC data saved successfully.');
 
         } catch (\Exception $e) {
             DB::rollBack();
